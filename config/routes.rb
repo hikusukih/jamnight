@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :song_infos
   get 'landing/index'
 
   resources :events

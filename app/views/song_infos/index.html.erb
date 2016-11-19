@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Song Infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Artist</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @song_infos.each do |song_info| %>
+      <tr>
+        <td><%= song_info.title %></td>
+        <td><%= song_info.artist %></td>
+        <td><%= link_to 'Show', song_info %></td>
+        <td><%= link_to 'Edit', edit_song_info_path(song_info) %></td>
+        <td><%= link_to 'Destroy', song_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Song info', new_song_info_path %>
