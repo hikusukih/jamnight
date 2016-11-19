@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  get 'landing/index'
+
   resources :events
   resources :users
   resources :events
-  root 'todos#index'
+
+  root 'landing#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
