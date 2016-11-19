@@ -1,0 +1,17 @@
+<body>
+  <section id="banner">
+    <div class="wrapper">
+      <header>
+        <p id="logo">JamNight</p>
+        <div id="nextEvent"><%= render "events/single" %></div>
+      </header>
+      <div class="content">
+        <div class="playlist">
+          <%= render "playlists/compactList" %>
+        </div>
+        <div class="songs"><%= render "song_infos/compactList" %></div>
+
+      </div>
+    </div>
+  </section>
+</body>

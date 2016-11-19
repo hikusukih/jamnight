@@ -1,4 +1,8 @@
-<p id="notice"><%= notice %></p>
+
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active"><%= link_to 'View list', todos_path %></li>
+  <li><%= link_to 'New todo', new_todo_path %></li>
+</ul>
 
 <h1>Listing Todos</h1>
 
@@ -16,9 +20,9 @@
       <tr>
         <td><%= todo.title %></td>
         <td><%= todo.description %></td>
-        <td><%= link_to 'Show', todo %></td>
-        <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
-        <td><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', todo, class: 'btn btn-primary btn-xs' %></td>
+        <td><%= link_to 'Edit', edit_todo_path(todo), class: 'btn btn-info btn-xs' %></td>
+        <td><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %></td>
       </tr>
     <% end %>
   </tbody>
