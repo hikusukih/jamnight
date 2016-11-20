@@ -1,1 +1,2 @@
-This is the most recent event!!!
+<% @recentEvent = Event.order("created_at").last %>
+<%= link_to @recentEvent.title, event_path(@recentEvent) %>
